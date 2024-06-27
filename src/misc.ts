@@ -36,7 +36,7 @@ export const immut = <T>(value: T): T => {
     const copiedObj = { ...value } as object;
     const newObj: object = {};
     Object.keys(copiedObj).forEach((key) => {
-      newObj[key] = immut(copiedObj[key]);
+      (newObj as any)[key] = immut(copiedObj[key]);
     });
     return Object.freeze(newObj) as T;
   }
@@ -63,7 +63,7 @@ export const newVal = <T>(oldVal: T): T => {
     const copiedObj = { ...oldVal } as Record<string, any>;
     const newObj: Record<string, any> = {};
     Object.keys(copiedObj).forEach((key) => {
-      newObj[key] = newVal(copiedObj[key]);
+      newObj[key] = newVal((copiedObj as any)[key]);
     });
     return newObj as T;
   }

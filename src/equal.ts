@@ -7,10 +7,7 @@ import { sortObjectByKeys } from "./misc.ts";
  * @param obj2
  * @returns boolean, if both obj1 and obj2 have same values to the deepest level or not
  */
-export const areObjectsEqual = (
-  obj1: Record<string, unknown>,
-  obj2: Record<string, unknown>
-): boolean => {
+export const areObjectsEqual = (obj1: object, obj2: object): boolean => {
   const sortedObj1 = sortObjectByKeys(obj1);
   const sortedObj2 = sortObjectByKeys(obj2);
 
@@ -24,7 +21,7 @@ export const areObjectsEqual = (
   for (const key of keys1) {
     if (
       !keys2.includes(key) ||
-      !areValuesEqual(sortedObj1[key], sortedObj2[key])
+      !areValuesEqual((sortedObj1 as any)[key], (sortedObj2 as any)[key])
     ) {
       return false;
     }
