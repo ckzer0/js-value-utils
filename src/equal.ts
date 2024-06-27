@@ -10,7 +10,7 @@ import { sortObjectByKeys } from "./misc.ts";
 export const areObjectsEqual = (
   obj1: Record<string, unknown>,
   obj2: Record<string, unknown>
-) => {
+): boolean => {
   const sortedObj1 = sortObjectByKeys(obj1);
   const sortedObj2 = sortObjectByKeys(obj2);
 
@@ -57,7 +57,7 @@ export const areArraysEqual = <T>(array1: T[], array2: T[]): boolean => {
  * @param value2
  * @returns  boolean, if the values in both input values are equal or not, even if datatype of values are mutable
  */
-export const areValuesEqual = (value1: any, value2: any) => {
+export const areValuesEqual = (value1: any, value2: any): boolean => {
   if (typeof value1 !== typeof value2) return false;
   if (Array.isArray(value1)) {
     return areArraysEqual(value1, value2);

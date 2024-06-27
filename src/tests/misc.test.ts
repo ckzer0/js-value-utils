@@ -1,4 +1,4 @@
-import { isPlainObject } from "./misc.ts";
+import { isPlainObject } from "../misc.ts";
 
 // TODO: add test cases for other misc functions
 

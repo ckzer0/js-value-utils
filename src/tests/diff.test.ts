@@ -1,5 +1,5 @@
-import { getArrUpdateOperations } from "./diff.ts";
-import { areArraysEqual } from "./equal.ts";
+import { getArrUpdateOperations } from "../diff.ts";
+import { areArraysEqual } from "../equal.ts";
 // Test 1: Empty arrays
 const test1 = getArrUpdateOperations([], []);
 console.log("test1", test1.length === 0 ? "Pass" : "Failed");

@@ -12,7 +12,7 @@ import type { ArrItemOperation, IndexedArr } from "./types.ts";
 export const getArrUpdateOperations = (
   oldArray: IndexedArr<any>,
   newArray: IndexedArr<any>
-) => {
+): ArrItemOperation<any>[] => {
   const oldArr = newVal(oldArray);
   const newArr = newVal(newArray);
   const operations: ArrItemOperation<any>[] = [];
