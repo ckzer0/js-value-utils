@@ -1,6 +1,6 @@
-import { areValuesEqual } from "./equal";
-import { newVal } from "./misc";
-import type { ArrItemOperation, IndexedArr } from "./types";
+import { areValuesEqual } from "./equal.ts";
+import { newVal } from "./misc.ts";
+import type { ArrItemOperation, IndexedArr } from "./types.ts";
 
 /**
  * This method calculates and returns the mutations in an array if any

@@ -1,4 +1,4 @@
-import { sortObjectByKeys } from "./misc";
+import { sortObjectByKeys } from "./misc.ts";
 
 /**
  * This method only check equality of values of both input objects

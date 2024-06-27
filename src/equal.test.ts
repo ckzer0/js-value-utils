@@ -1,4 +1,4 @@
-import { areValuesEqual } from "./equal";
+import { areValuesEqual } from "./equal.ts";
 
 //TODO: Write tests for other equality functions
 
